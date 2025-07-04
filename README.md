@@ -78,10 +78,6 @@ motivation-generator/
 S.Lokesh 
 Student Developer | AI Enthusiast
 
-## 📃 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## 🙏 Acknowledgments
 
 - [Google Gemini API](https://ai.google.dev/)
