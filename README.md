@@ -23,7 +23,7 @@ This is a web-based application that generates motivational quotes based on user
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/motivation-generator
+git clone (https://github.com/S-lokesh4432/project.git)
 cd motivation-generator
 ```
 
@@ -69,7 +69,7 @@ motivation-generator/
 
 ## 👨‍💻 Author
 
-**Sharath Mettu**  
+S.Lokesh 
 Student Developer | AI Enthusiast
 
 ## 📃 License
