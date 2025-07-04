@@ -76,7 +76,7 @@ motivation-generator/
 ## 👨‍💻 Author
 
 S.Lokesh 
-Student Developer | AI Enthusiast
+Student | AI Enthusiast
 
 ## 🙏 Acknowledgments
 
