@@ -30,6 +30,12 @@ cd motivation-generator
 2. **Install Dependencies**
 ```bash
 pip install -r requirements.txt
+Your requirements.txt should contain:
+ streamlit
+ google-generativeai
+ pillow
+ streamlit-lottie
+ requests
 ```
 
 3. **Set Your Gemini API Key**
