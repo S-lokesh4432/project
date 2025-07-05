@@ -2,6 +2,8 @@
 
 This is a web-based application that generates motivational quotes based on user input using Google's Gemini AI. It transforms the generated quote into a beautiful, shareable image with a scenic background and a clean design.
 
+**Live App:** [Click here to try it](https://projectgit-cmry9tqinycaeubpabtuuz.streamlit.app/)
+
 ## 🚀 Features
 
 - 🔮 AI-generated motivational quotes using Gemini
