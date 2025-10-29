@@ -1,5 +1,6 @@
 streamlit
-google-generativeai
-streamlit-lottie
+google-generativeai>=0.7.2
+Pillow
 requests
-pillow
+streamlit-lottie
+
