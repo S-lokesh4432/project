@@ -41,20 +41,27 @@ def get_motivation(prompt):
 
 # ✅ Generate a quote image with random background
 def generate_quote_image(quote):
-    # ✅ List of random scenic aesthetic backgrounds
     background_urls = [
-        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe",  # Planner
-        "https://images.unsplash.com/photo-1496307653780-42ee777d4833",  # Forest
-        "https://images.unsplash.com/photo-1505489304217-0c2f20504c0b",  # Ocean
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",  # Desk
-        "https://images.unsplash.com/photo-1501426026826-31c667bdf23d",  # Sunset
+        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1505489304217-0c2f20504c0b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=800&q=80",
     ]
     selected_url = random.choice(background_urls)
 
-    # ✅ Download and resize image
-    response = requests.get(selected_url)
+    # ✅ Add headers to avoid being blocked
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(selected_url, headers=headers)
+
+    # ✅ Validate response
+    if response.status_code != 200 or "image" not in response.headers.get("Content-Type", ""):
+        st.error("⚠️ Failed to load background image. Please try again.")
+        return
+
     background = Image.open(io.BytesIO(response.content)).convert("RGB")
     background = background.resize((800, 400))
+
 
     # ✅ Add white semi-transparent overlay for quote box
     overlay = Image.new('RGBA', background.size, (255, 255, 255, 0))
@@ -116,6 +123,7 @@ if st.button("Generate My Motivation"):
         st.success("Here's your quote:")
         st.markdown(f"> *{quote}*")
         generate_quote_image(quote)
+
 
 
 
