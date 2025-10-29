@@ -8,7 +8,7 @@ import random
 import os
 
 # ✅ Use Gemini API Key from Streamlit secrets
-genai.configure(api_key=st.secrets["AIzaSyDXIADvL1fxurctlTsolWmMNgFU6EUUPgc"])
+genai.configure(api_key="AIzaSyDXIADvL1fxurctlTsolWmMNgFU6EUUPgc")
 
 # ✅ Set full-page background image using CSS
 def set_background(image_url):
@@ -116,6 +116,7 @@ if st.button("Generate My Motivation"):
         st.success("Here's your quote:")
         st.markdown(f"> *{quote}*")
         generate_quote_image(quote)
+
 
 
 
