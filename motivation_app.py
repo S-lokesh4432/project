@@ -7,7 +7,7 @@ import io
 import random
 
 # ✅ Gemini API Key (replace with your real key)
-genai.configure(api_key="AIzaSyCLNfAJ35lS6IuUvGAyRGYhr7iyUBCh-2A")
+genai.configure(api_key="AIzaSyCO6t310sIgf9ZWRZGJSdMAFCd_04CqnmQ")
 
 # ✅ Set full-page background image using CSS
 def set_background(image_url):
@@ -115,3 +115,4 @@ if st.button("Generate My Motivation"):
         st.success("Here's your quote:")
         st.markdown(f"> *{quote}*")
         generate_quote_image(quote)
+
