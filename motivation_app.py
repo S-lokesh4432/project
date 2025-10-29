@@ -35,7 +35,7 @@ def load_lottie_url(url):
 
 # ✅ Generate motivational quote using Gemini
 def get_motivation(prompt):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.0-flash')
     response = model.generate_content(prompt)
     return response.text.strip()
 
@@ -116,6 +116,7 @@ if st.button("Generate My Motivation"):
         st.success("Here's your quote:")
         st.markdown(f"> *{quote}*")
         generate_quote_image(quote)
+
 
 
 
